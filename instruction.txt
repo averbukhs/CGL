@@ -1,0 +1,18 @@
+Prerequisites:
+ - ubuntu16 (if you want to run test on another linux distribution you will have to find a way to install google chrome)
+ - python3 
+ - pip3
+
+Prepare environment:
+pip3 install -U selenium
+sudo apt-get update
+sudo apt-get install -y libappindicator1 fonts-liberation 
+cd /tmp
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
+
+wget https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
+sudo unzip chromedriver_linux64.zip -d /usr/local/bin/
+
+Run tests:
+python test_home_page.py

@@ -1,0 +1,7 @@
+base_url: https://arnvald.github.io/cgl-data-exercise/
+companies:
+- name: Lufthansa
+  industry: transport
+- name: Apple
+  industry: technology
+
