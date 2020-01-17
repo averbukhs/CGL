@@ -30,4 +30,8 @@ class HomePage(Page):
   def filter_by_industry(self, industry):
     self.find_element(*self.locator.FILTER_INDUSTRY).find_element(By.CSS_SELECTOR, 'option:nth-child(4)').click()
     return self.get_companies_list()
-    
+
+  def sort_by_name(self):
+    self.find_element(*self.locator.SORT).find_element(By.CSS_SELECTOR, 'option:nth-child(1)').click()
+    return self.get_companies_list()
+ 
