@@ -1,7 +1,7 @@
 def test_cases(number):
     return testCases[number]
 
-    
+
 testCases = [
     #[severity, description]
     ['Blocker', 'When user goes to main page, page should be loaded'],
