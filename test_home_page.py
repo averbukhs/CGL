@@ -46,7 +46,14 @@ class TestHomePage(unittest.TestCase):
     page = HomePage(self.driver)
     res = page.sort_by_name()
     self.assertEqual(res[0].get_name(), 'Apple')
-    
+
+  def test_filter_sorter(self):
+    print("\n" + str(test_cases(4)))
+    page = HomePage(self.driver)
+    _ = page.filter_company_name('sa')
+    res = page.filter_by_industry('technology')
+    self.assertEqual(len(res), 1)
+    self.assertEqual(res[0].get_name(), 'SAP')
     
   def tearDown(self):
     self.driver.close()
