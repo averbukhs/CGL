@@ -9,9 +9,9 @@ class Company(object):
             By.CSS_SELECTOR, 'span:nth-child(2)').text.replace('Market cap: ', '')
         self.share_price = element.find_element(
             By.CSS_SELECTOR, 'span:nth-child(3)').text.replace('Share price: ', '')
-        self.stock_exchange = self.share_price = element.find_element(
+        self.stock_exchange = element.find_element(
             By.CSS_SELECTOR, 'span:nth-child(4)').text.replace('Stock Exchange: ', '')
-        self.industry = self.share_price = element.find_element(
+        self.industry = element.find_element(
             By.CSS_SELECTOR, 'span:nth-child(5)').text.replace('Industry: ', '')
 
     def get_name(self):

@@ -46,7 +46,11 @@ class TestHomePage(unittest.TestCase):
         print("\n" + str(test_cases(3)))
         page = HomePage(self.driver)
         res = page.sort_by_name()
-        self.assertEqual(res[0].get_name(), 'Apple')
+        config = Config()
+        company_names = [company['name'] for company in config['companies']]
+        company_names_sorted = sort(company_names)        
+        first_by_name = company_names_sorted[0]
+        self.assertEqual(res[0].get_name(), first_by_name)
 
     def test_filter_sorter(self):
         print("\n" + str(test_cases(4)))
